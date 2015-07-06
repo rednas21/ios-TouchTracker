@@ -1,18 +1,24 @@
 //
-//  ViewController.m
+//  DrawViewController.m
 //  TouchTracker
 //
 //  Created by Sander Peerna on 7/6/15.
 //  Copyright (c) 2015 Sander Peerna. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DrawViewController.h"
+#import "DrawView.h"
 
-@interface ViewController ()
+@interface DrawViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DrawViewController
+
+- (void)loadView
+{
+    self.view = [[DrawView alloc] initWithFrame:CGRectZero];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		EA25C29D1B4B273400B71A10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C29C1B4B273400B71A10 /* main.m */; };
 		EA25C2A01B4B273400B71A10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C29F1B4B273400B71A10 /* AppDelegate.m */; };
-		EA25C2A31B4B273400B71A10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2A21B4B273400B71A10 /* ViewController.m */; };
+		EA25C2A31B4B273400B71A10 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2A21B4B273400B71A10 /* DrawViewController.m */; };
 		EA25C2A61B4B273400B71A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA25C2A41B4B273400B71A10 /* Main.storyboard */; };
 		EA25C2A81B4B273400B71A10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA25C2A71B4B273400B71A10 /* Images.xcassets */; };
 		EA25C2AB1B4B273400B71A10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA25C2A91B4B273400B71A10 /* LaunchScreen.xib */; };
 		EA25C2B71B4B273400B71A10 /* TouchTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2B61B4B273400B71A10 /* TouchTrackerTests.m */; };
+		EA25C2C21B4B284C00B71A10 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2C11B4B284C00B71A10 /* Line.m */; };
+		EA25C2C51B4B297100B71A10 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2C41B4B297100B71A10 /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		EA25C29C1B4B273400B71A10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA25C29E1B4B273400B71A10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA25C29F1B4B273400B71A10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA25C2A11B4B273400B71A10 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA25C2A21B4B273400B71A10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA25C2A11B4B273400B71A10 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		EA25C2A21B4B273400B71A10 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		EA25C2A51B4B273400B71A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA25C2A71B4B273400B71A10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA25C2AA1B4B273400B71A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EA25C2B01B4B273400B71A10 /* TouchTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA25C2B51B4B273400B71A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA25C2B61B4B273400B71A10 /* TouchTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTrackerTests.m; sourceTree = "<group>"; };
+		EA25C2C01B4B284C00B71A10 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		EA25C2C11B4B284C00B71A10 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		EA25C2C31B4B297100B71A10 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		EA25C2C41B4B297100B71A10 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				EA25C29E1B4B273400B71A10 /* AppDelegate.h */,
 				EA25C29F1B4B273400B71A10 /* AppDelegate.m */,
-				EA25C2A11B4B273400B71A10 /* ViewController.h */,
-				EA25C2A21B4B273400B71A10 /* ViewController.m */,
+				EA25C2C01B4B284C00B71A10 /* Line.h */,
+				EA25C2C11B4B284C00B71A10 /* Line.m */,
+				EA25C2C31B4B297100B71A10 /* DrawView.h */,
+				EA25C2C41B4B297100B71A10 /* DrawView.m */,
+				EA25C2A11B4B273400B71A10 /* DrawViewController.h */,
+				EA25C2A21B4B273400B71A10 /* DrawViewController.m */,
 				EA25C2A41B4B273400B71A10 /* Main.storyboard */,
 				EA25C2A71B4B273400B71A10 /* Images.xcassets */,
 				EA25C2A91B4B273400B71A10 /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA25C2A31B4B273400B71A10 /* ViewController.m in Sources */,
+				EA25C2A31B4B273400B71A10 /* DrawViewController.m in Sources */,
+				EA25C2C21B4B284C00B71A10 /* Line.m in Sources */,
 				EA25C2A01B4B273400B71A10 /* AppDelegate.m in Sources */,
 				EA25C29D1B4B273400B71A10 /* main.m in Sources */,
+				EA25C2C51B4B297100B71A10 /* DrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

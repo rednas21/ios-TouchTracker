@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DrawViewController.h
 //  TouchTracker
 //
 //  Created by Sander Peerna on 7/6/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DrawViewController : UIViewController
 
 @end
 
