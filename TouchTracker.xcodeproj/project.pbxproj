@@ -16,6 +16,7 @@
 		EA25C2B71B4B273400B71A10 /* TouchTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2B61B4B273400B71A10 /* TouchTrackerTests.m */; };
 		EA25C2C21B4B284C00B71A10 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2C11B4B284C00B71A10 /* Line.m */; };
 		EA25C2C51B4B297100B71A10 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C2C41B4B297100B71A10 /* DrawView.m */; };
+		EAC2E2E41B4D98A400FC9E48 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC2E2E31B4D98A400FC9E48 /* Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		EA25C2C11B4B284C00B71A10 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		EA25C2C31B4B297100B71A10 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		EA25C2C41B4B297100B71A10 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		EAC2E2E21B4D98A400FC9E48 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		EAC2E2E31B4D98A400FC9E48 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				EA25C29F1B4B273400B71A10 /* AppDelegate.m */,
 				EA25C2C01B4B284C00B71A10 /* Line.h */,
 				EA25C2C11B4B284C00B71A10 /* Line.m */,
+				EAC2E2E21B4D98A400FC9E48 /* Circle.h */,
+				EAC2E2E31B4D98A400FC9E48 /* Circle.m */,
 				EA25C2C31B4B297100B71A10 /* DrawView.h */,
 				EA25C2C41B4B297100B71A10 /* DrawView.m */,
 				EA25C2A11B4B273400B71A10 /* DrawViewController.h */,
@@ -232,6 +237,7 @@
 				EA25C2A31B4B273400B71A10 /* DrawViewController.m in Sources */,
 				EA25C2C21B4B284C00B71A10 /* Line.m in Sources */,
 				EA25C2A01B4B273400B71A10 /* AppDelegate.m in Sources */,
+				EAC2E2E41B4D98A400FC9E48 /* Circle.m in Sources */,
 				EA25C29D1B4B273400B71A10 /* main.m in Sources */,
 				EA25C2C51B4B297100B71A10 /* DrawView.m in Sources */,
 			);
@@ -430,6 +436,7 @@
 				EA25C2BC1B4B273400B71A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA25C2BD1B4B273400B71A10 /* Build configuration list for PBXNativeTarget "TouchTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +445,7 @@
 				EA25C2BF1B4B273400B71A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
