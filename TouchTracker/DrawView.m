@@ -68,8 +68,8 @@
     [[UIColor blackColor] set];
     for (Circle *circle in self.finishedCircles) {
         CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-        CGContextSetLineWidth(context, 3.0);
+        CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
+        CGContextSetLineWidth(context, 5.0);
         CGContextAddEllipseInRect(context, circle.borderRect);
         CGContextStrokeEllipseInRect(context, circle.borderRect);
         CGContextFillPath(context);
@@ -79,8 +79,8 @@
     for (NSValue *key in self.circlesInProgress) {
         Circle *circle = self.circlesInProgress[key];
         CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-        CGContextSetLineWidth(context, 3.0);
+        CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
+        CGContextSetLineWidth(context, 5.0);
         CGContextAddEllipseInRect(context, circle.borderRect);
         CGContextStrokeEllipseInRect(context, circle.borderRect);
         CGContextFillPath(context);
