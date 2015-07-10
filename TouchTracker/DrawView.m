@@ -13,9 +13,8 @@
 @interface DrawView ()
 
 @property (nonatomic, strong) NSMutableDictionary *circlesInProgress;
-@property (nonatomic, strong) NSMutableArray *finishedCircles;
 @property (nonatomic, strong) NSMutableDictionary *linesInProgress;
-@property (nonatomic, strong) NSMutableArray *finishedLines;
+@property (nonatomic, strong) NSMutableArray *finishedFigures;
 
 @end
 
@@ -27,10 +26,9 @@
     
     if (self) {
         self.circlesInProgress = [[NSMutableDictionary alloc] init];
-        self.finishedCircles = [[NSMutableArray alloc] init];
-        
         self.linesInProgress = [[NSMutableDictionary alloc] init];
-        self.finishedLines = [[NSMutableArray alloc] init];
+        
+        self.finishedFigures = [[NSMutableArray alloc] init];
         
         self.backgroundColor = [UIColor grayColor];
         self.multipleTouchEnabled = YES;
@@ -56,8 +54,19 @@
 {
     // Drawing code
     [[UIColor blackColor] set];
-    for (Line *line in self.finishedLines) {
-        [self strokeLine:line];
+    for (id figure in self.finishedFigures) {
+        if ([figure isKindOfClass:[Line class]]) {
+            Line *line = figure;
+            [self strokeLine:line];
+        } else if ([figure isKindOfClass:[Circle class]]) {
+            Circle *circle = figure;
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+            CGContextSetLineWidth(context, 5.0);
+            CGContextAddEllipseInRect(context, circle.borderRect);
+            CGContextStrokeEllipseInRect(context, circle.borderRect);
+            CGContextFillPath(context);
+        }
     }
     
     [[UIColor redColor] set];
@@ -65,21 +74,10 @@
         [self strokeLine:self.linesInProgress[key]];
     }
     
-    [[UIColor blackColor] set];
-    for (Circle *circle in self.finishedCircles) {
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
-        CGContextSetLineWidth(context, 5.0);
-        CGContextAddEllipseInRect(context, circle.borderRect);
-        CGContextStrokeEllipseInRect(context, circle.borderRect);
-        CGContextFillPath(context);
-    }
-    
-    [[UIColor redColor] set];
     for (NSValue *key in self.circlesInProgress) {
         Circle *circle = self.circlesInProgress[key];
         CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
+        CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
         CGContextSetLineWidth(context, 5.0);
         CGContextAddEllipseInRect(context, circle.borderRect);
         CGContextStrokeEllipseInRect(context, circle.borderRect);
@@ -171,14 +169,14 @@
         
         NSLog(@"%f, %f, %f, %f", circle.centerX, circle.centerY, circle.radiusX, circle.radiusY);
         
-        [self.finishedCircles addObject:circle];
+        [self.finishedFigures addObject:circle];
         [self.circlesInProgress removeObjectForKey:key];
     } else {
         for (UITouch *t in touches) {
             NSValue *key = [NSValue valueWithNonretainedObject:t];
             Line *line = self.linesInProgress[key];
         
-            [self.finishedLines addObject:line];
+            [self.finishedFigures addObject:line];
             [self.linesInProgress removeObjectForKey:key];
         }
     }
